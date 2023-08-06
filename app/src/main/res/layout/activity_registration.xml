@@ -1,9 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Intro -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RegistrationActivity">
+    android:id="@+id/intro"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00BCD4"
+    android:clipToOutline="true"
+    app:layout_anchorGravity="center|center_horizontal|center_vertical">
 
-</RelativeLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="316dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="143dp"
+        android:text="سجل"
+        android:textSize="50sp"
+        />
+
+
+        <!-- Rectangle 4 -->
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/register"
+            android:layout_width="283dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/rectangle4_email"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+
+                android:gravity="left|center"
+
+                android:paddingLeft="10dp"
+                android:hint="ادخل الايميل"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/rectangle4_username"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="15dp"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:hint="ادخل اسم المستخدم"
+                android:textSize="20sp" />
+
+
+            <EditText
+                android:id="@+id/rectangle4_password"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="15dp"
+
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:hint="كلمة السر"
+                android:inputType="textPassword"
+                android:textSize="25sp" />
+            <EditText
+                android:id="@+id/rectangle4_password2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="15dp"
+
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:hint="أعد كلمة السر"
+                android:inputType="textPassword"
+                android:textSize="25sp" />
+
+
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="283dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="20dp"
+                android:text="Register"
+                app:backgroundTint="@null" />
+
+            <TextView
+                android:id="@+id/already_hav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnRegister"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:text="لدي حساب بالفعل" />
+
+        </LinearLayout>
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress_bar1"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        />
+
+    </RelativeLayout>
+
+

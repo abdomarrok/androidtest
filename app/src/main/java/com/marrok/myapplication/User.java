@@ -1,10 +1,14 @@
 package com.marrok.myapplication;
-
+import com.google.gson.annotations.SerializedName;
 public class User {
     private int id;
+    @SerializedName("username")
     private String username;
+    @SerializedName("password")
     private String password;
+    @SerializedName("email")
     private String email;
+
 
     private String token;
 
@@ -12,13 +16,6 @@ public class User {
 
     public User getUser() {
         return user;
-    }
-
-    public User(int id, String username, String email, String token) {
-        this.id = id;
-        this.username = username;
-        this.email = email;
-        this.token = token;
     }
 
     public User(String username, String password, String email) {

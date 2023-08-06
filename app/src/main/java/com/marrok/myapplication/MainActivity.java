@@ -28,7 +28,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String URL_API_Test="https://6ff5-105-235-134-190.ngrok-free.app/";
+    public static final String URL_API_Test="https://998a-105-108-104-31.ngrok-free.app/";
+
+
     TextView register,forgot_pass;
     private EditText username,password;
     private Button signInBtn;
@@ -126,12 +128,13 @@ public class MainActivity extends AppCompatActivity {
 
                     // You can now use the token and user details as needed
                     Log.d(TAG, "Token: " + userResponse.getToken());
-                    Log.d(TAG, "User ID: " + userResponse.getUser().getId());
                     Log.d(TAG, "Username: " + userResponse.getUser().getUsername());
                     Log.d(TAG, "Email: " + userResponse.getUser().getEmail());
 
                     Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
+                    startActivity(new Intent(MainActivity.this,Dashbord.class));
+
                 } else {
                     // Handle the case when the response is not successful (e.g., invalid credentials)
                     Toast.makeText(MainActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
@@ -150,29 +153,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-       /* Call<User> createUser = retrofitClient.SignUpNew(user);
-        createUser.enqueue(new Callback<User>() {
-            @Override
-            public void onResponse(Call<User> call, Response<User> response) {
-                int responseCode = response.code();
-                Log.d("TAG", "onResponse: Signup response code: " + responseCode);
-
-                if (response.isSuccessful()) {
-                    // Request successful
-                    User user = response.body();
-                    Log.d("TAG", "onResponse: Signup successful " + user);
-                } else {
-                    // Request failed
-                    String errorMessage = response.message();
-                    Log.d("TAG", "onResponse: Signup failed: " + errorMessage);
-                }
-            }
-            @Override
-            public void onFailure(Call<User> call, Throwable t) {
-                Log.d("TAG", " onFailure Signup failed: " + t.getMessage());
-            }
-        });*/
 
 
 

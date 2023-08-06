@@ -13,4 +13,8 @@ public interface RetrofitClient {
     @POST("/login/")
     Call<User> LoginUser(@Body User user);
 
+
+    @POST("/migrate_to_seller/")
+    Call<Seller> createSeller(@Body Seller request);
+
 }
